@@ -201,5 +201,27 @@ UUID:               uuid
 - Unit tests for: provider trait mock, DB CRUD operations, markdown parsing
 - A README with: build instructions, how to add a new provider, how to run
 
+---
+
+## BUILD INSTRUCTIONS
+
+1. Ensure you have Rust installed (https://rustup.rs/)
+2. Clone or download the repository
+3. Run `cargo build --release` to build the application
+4. Run `cargo run --release` to start the application
+
+The application requires Ollama to be running on localhost:11434. Install Ollama from https://ollama.ai and pull a model, e.g., `ollama pull llama2`.
+
+## HOW TO ADD A NEW PROVIDER
+
+1. Implement the `LLMProvider` trait in a new module under `src/provider/`
+2. Add the provider config to `src/config/mod.rs`
+3. Update the UI in `src/ui/mod.rs` to allow selecting the new provider
+4. Add the provider to the config loading/saving
+
+## HOW TO RUN
+
+After building, execute the binary. The app will create a data directory in your system's data folder (e.g., `~/.local/share/RustyLlama` on Linux) for storing conversations and config.
+
 Start with Phase 1. Confirm the UI framework choice before writing code,
 with a one-paragraph rationale.

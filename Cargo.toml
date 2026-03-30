@@ -1,0 +1,25 @@
+[package]
+name = "rusty_llama"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+eframe = "0.27"
+egui = "0.27"
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["json", "stream"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rusqlite = { version = "0.31", features = ["bundled"] }
+rusqlite_migration = "1.0"
+pulldown-cmark = "0.10"
+syntect = "5.2"
+pdf-extract = "0.7"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+dirs = "5.0"
+toml = "0.8"
+uuid = { version = "1.0", features = ["v4"] }
+async-trait = "0.1"
+futures = "0.3"
+chrono = { version = "0.4", features = ["serde"] }
